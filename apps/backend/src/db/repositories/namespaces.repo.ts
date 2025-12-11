@@ -202,6 +202,7 @@ export class NamespacesRepository {
         url: mcpServersTable.url,
         env: mcpServersTable.env,
         bearerToken: mcpServersTable.bearerToken,
+        headers: mcpServersTable.headers,
         error_status: mcpServersTable.error_status,
         created_at: mcpServersTable.created_at,
         user_id: mcpServersTable.user_id,
@@ -225,6 +226,7 @@ export class NamespacesRepository {
       url: server.url,
       env: server.env || {},
       bearerToken: server.bearerToken,
+      headers: server.headers || {},
       error_status: server.error_status,
       created_at: server.created_at,
       user_id: server.user_id,
@@ -258,6 +260,7 @@ export class NamespacesRepository {
         overrideName: namespaceToolMappingsTable.override_name,
         overrideTitle: namespaceToolMappingsTable.override_title,
         overrideDescription: namespaceToolMappingsTable.override_description,
+        overrideAnnotations: namespaceToolMappingsTable.override_annotations,
       })
       .from(toolsTable)
       .innerJoin(
